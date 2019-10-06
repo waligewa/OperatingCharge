@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="linearlayout_tab" type="id"/>
+    <item name="divide_tab" type="id"/>
+    <item name="viewpager_tab" type="id"/>
+</resources>
