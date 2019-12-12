@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/value_10dp"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!--预约日期和时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="80dp"
+            android:gravity="center_vertical"
+            android:text="预约日期和时间："
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/order_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:padding="2dp"
+            android:text=""
+            android:textColor="#333"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!--预约项目-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="80dp"
+            android:gravity="center_vertical"
+            android:text="预约项目："
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/order_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#333"/>
+
+    </LinearLayout>
+
+    <!--预约次数-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="80dp"
+            android:gravity="center_vertical"
+            android:text="预约次数："
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/order_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#333"/>
+
+    </LinearLayout>
+
+    <!--预约理发师-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="80dp"
+            android:gravity="center_vertical"
+            android:text="预约理发师："
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/order_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/value_10dp"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#333"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dcdcdc"
+        android:layout_marginBottom="@dimen/value_5dp"/>
+
+</LinearLayout>

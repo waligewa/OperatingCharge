@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/order_fragment"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,123 +16,160 @@
             android:id="@+id/linearlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
 
+            <!--姓名  性别-->
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:orientation="vertical">
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
 
-                <LinearLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="姓名："
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/color_333333" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="50dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/actionsheet_gray"
+                    android:padding="10dp"
+                    android:hint=""
+                    android:textColorHint="@color/color_999999" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="性别："
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/color_333333" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="50dp"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/actionsheet_gray"
+                    android:padding="10dp"
+                    android:hint=""
+                    android:textColorHint="@color/color_999999" />
+
+            </LinearLayout>
+
+            <!--工号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="工号："
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/color_333333" />
+
+                <TextView
+                    android:id="@+id/worknumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:orientation="horizontal">
+                    android:minHeight="@dimen/value_40dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/actionsheet_gray"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:textColorHint="@color/color_999999" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="姓名："
-                        android:textColor="@color/color_333333" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/username"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minWidth="50dp"
-                        android:gravity="center"
-                        android:textColor="@color/actionsheet_gray" />
+            <!--部门-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="性别："
-                        android:textColor="@color/color_333333" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="部门："
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/color_333333" />
 
-                    <TextView
-                        android:id="@+id/gender"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:minWidth="50dp"
-                        android:gravity="center_vertical"
-                        android:textColor="@color/actionsheet_gray" />
-
-                </LinearLayout>
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/apartment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_marginRight="15dp"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:minHeight="@dimen/value_40dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/actionsheet_gray"
+                    android:textColorHint="@color/color_999999"
+                    android:textSize="@dimen/value_14sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="工号："
-                        android:textColor="@color/color_333333" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/worknumber"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minWidth="100dp"
-                        android:layout_marginRight="15dp"
-                        android:paddingLeft="5dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/actionsheet_gray" />
+            <!--预定项目-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
-                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/value_40dp"
+                    android:gravity="center_vertical"
+                    android:text="预约项目："
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/color_333333" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <EditText
+                    android:id="@+id/schedule_item"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/value_40dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="5dp"
+                    android:textSize="@dimen/value_14sp"
+                    android:textColor="@color/actionsheet_gray"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/shape_frame"
+                    android:text=""
+                    android:textColorHint="@color/color_999999" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="部门："
-                        android:textColor="@color/color_333333" />
-
-                    <TextView
-                        android:id="@+id/apartment"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minWidth="100dp"
-                        android:layout_marginRight="15dp"
-                        android:paddingLeft="5dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/actionsheet_gray" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="预定项目："
-                        android:textColor="@color/color_333333" />
-
-                    <TextView
-                        android:id="@+id/schedule_item"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:minWidth="100dp"
-                        android:layout_marginRight="15dp"
-                        android:paddingLeft="5dp"
-                        android:textSize="15sp"
-                        android:textColor="@color/actionsheet_gray" />
-
-                </LinearLayout>
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/value_40dp"
+                    android:minWidth="120dp"
+                    android:gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:paddingLeft="5dp"
+                    android:background="@drawable/selecter_btn1"
+                    android:popupBackground="#979797"
+                    android:dropDownVerticalOffset="45dp" />
 
             </LinearLayout>
 
@@ -142,7 +180,9 @@
             android:id="@+id/linearlayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_below="@+id/linearlayout"
             android:orientation="horizontal">
 
@@ -150,26 +190,47 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:text="预定时间："
+                android:text="预约时间："
+                android:textSize="@dimen/value_14sp"
                 android:textColor="@color/color_333333" />
 
-            <TextView
+            <EditText
                 android:id="@+id/schedule_time"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="100dp"
+                android:layout_weight="1"
+                android:minHeight="@dimen/value_40dp"
                 android:layout_marginRight="15dp"
                 android:paddingLeft="5dp"
-                android:textSize="15sp"
-                android:textColor="@color/actionsheet_gray" />
+                android:textSize="@dimen/value_14sp"
+                android:textColor="@color/actionsheet_gray"
+                android:gravity="center_vertical"
+                android:background="@drawable/shape_frame"
+                android:text=""
+                android:textColorHint="@color/color_999999" />
+
+            <TextView
+                android:id="@+id/click"
+                android:layout_width="wrap_content"
+                android:minWidth="@dimen/value_60dp"
+                android:layout_height="@dimen/value_40dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/selecter_btn1"
+                android:gravity="center"
+                android:text="请点击"
+                android:textColor="#fff"
+                android:textSize="@dimen/value_14sp" />
 
         </LinearLayout>
 
-        <!--联系电话-->
+        <!--本月次数-->
         <LinearLayout
+            android:id="@+id/linearlayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_below="@+id/linearlayout2"
             android:orientation="horizontal">
 
@@ -177,27 +238,72 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:text="本月次数："
+                android:textSize="@dimen/value_14sp"
+                android:textColor="@color/color_333333" />
+
+            <TextView
+                android:id="@+id/number_of_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/value_40dp"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/value_14sp"
+                android:textColor="@color/actionsheet_gray"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:textColorHint="@color/color_999999" />
+
+        </LinearLayout>
+
+        <!--联系电话-->
+        <LinearLayout
+            android:id="@+id/linearlayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/linearlayout3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:text="联系电话："
+                android:textSize="@dimen/value_14sp"
                 android:textColor="@color/color_333333" />
 
             <TextView
                 android:id="@+id/telephone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minWidth="100dp"
+                android:minHeight="@dimen/value_40dp"
                 android:layout_marginRight="15dp"
                 android:paddingLeft="5dp"
-                android:textSize="15sp"
-                android:textColor="@color/actionsheet_gray" />
+                android:textSize="@dimen/value_14sp"
+                android:textColor="@color/actionsheet_gray"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:textColorHint="@color/color_999999" />
 
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:text="进行中"/>
+            android:id="@+id/submit"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/linearlayout4"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/selecter_btn"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="提交"
+            android:textColor="#ffffff"
+            android:textColorHint="#bbffffff"
+            android:textSize="@dimen/value_14sp" />
 
     </RelativeLayout>
 

@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@mipmap/personal_data"
+            android:src="@mipmap/personal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
 
@@ -50,7 +50,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/enterprise_introduction"
+        android:id="@+id/history"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="1dp"
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@mipmap/about_us"
+            android:src="@mipmap/personal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
 
@@ -76,7 +76,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/setting"
+        android:id="@+id/password_modify"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="1dp"
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@mipmap/setting"
+            android:src="@mipmap/change"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
 
@@ -112,7 +112,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@mipmap/about_us"
+            android:src="@mipmap/version"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
 
@@ -120,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="目前版本：1.0"
+            android:text="目前版本：1.5.1"
             android:textSize="14sp"
             android:textColor="#333"/>
 

@@ -161,7 +161,7 @@
 
         <!--预定时间-->
         <LinearLayout
-            android:id="@+id/linearlayout2"
+            android:id="@+id/linearlayout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -172,7 +172,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:minWidth="90dp"
                 android:text="预定时间："
+                android:textColor="@color/color_333333" />
+
+            <TextView
+                android:id="@+id/book_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:layout_marginRight="15dp"
+                android:paddingLeft="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/actionsheet_gray" />
+
+        </LinearLayout>
+
+        <!--预定时间段-->
+        <LinearLayout
+            android:id="@+id/linearlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/linearlayout1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minWidth="90dp"
+                android:text="预定时间段："
                 android:textColor="@color/color_333333" />
 
             <TextView
@@ -198,6 +228,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minWidth="90dp"
                 android:gravity="center_vertical"
                 android:text="联系电话："
                 android:textColor="@color/color_333333" />
@@ -215,6 +246,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/state"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

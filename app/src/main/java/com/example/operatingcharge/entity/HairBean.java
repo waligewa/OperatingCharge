@@ -10,76 +10,139 @@ import java.io.Serializable;
  */
 public class HairBean implements Serializable {
 
-    private String username;              // 姓名
-    private String sex;                   // 性别
-    private String workNumber;            // 工号
-    private String apartment;             // 部门
-    private String bookProject;           // 预定项目
-    private String time;                  // 预定时间
-    private String phone;                 // 联系电话
-    private String state;                 // 状态
+    private String Name;                  // 姓名
+    private String Sex;                   // 性别
+    private String Position;
+    private String Department;            // 部门
+    private String ID;
+    private String WorkNo;                // 工号
+    private String ProjectName;           // 预定项目
+    private String OrderDate;             // 预定时间
+    private String OrderTime;             // 预定时间段
+    private String CurrentNum;
+    private String TelePhone;             // 联系电话
+    private String IsHandle;              // 状态
+    private String Barber_Set;
+    private String Barber_Actual;
+    private String Grade;
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return Name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getSex() {
-        return sex;
+        return Sex;
     }
 
     public void setSex(String sex) {
-        this.sex = sex;
+        Sex = sex;
     }
 
-    public String getWorkNumber() {
-        return workNumber;
+    public String getPosition() {
+        return Position;
     }
 
-    public void setWorkNumber(String workNumber) {
-        this.workNumber = workNumber;
+    public void setPosition(String position) {
+        Position = position;
     }
 
-    public String getApartment() {
-        return apartment;
+    public String getDepartment() {
+        return Department;
     }
 
-    public void setApartment(String apartment) {
-        this.apartment = apartment;
+    public void setDepartment(String department) {
+        Department = department;
     }
 
-    public String getBookProject() {
-        return bookProject;
+    public String getID() {
+        return ID;
     }
 
-    public void setBookProject(String bookProject) {
-        this.bookProject = bookProject;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
-    public String getTime() {
-        return time;
+    public String getWorkNo() {
+        return WorkNo;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setWorkNo(String workNo) {
+        WorkNo = workNo;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getProjectName() {
+        return ProjectName;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setProjectName(String projectName) {
+        ProjectName = projectName;
     }
 
-    public String getState() {
-        return state;
+    public String getOrderDate() {
+        return OrderDate;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setOrderDate(String orderDate) {
+        OrderDate = orderDate;
+    }
+
+    public String getOrderTime() {
+        return OrderTime;
+    }
+
+    public void setOrderTime(String orderTime) {
+        OrderTime = orderTime;
+    }
+
+    public String getCurrentNum() {
+        return CurrentNum;
+    }
+
+    public void setCurrentNum(String currentNum) {
+        CurrentNum = currentNum;
+    }
+
+    public String getTelePhone() {
+        return TelePhone;
+    }
+
+    public void setTelePhone(String telePhone) {
+        TelePhone = telePhone;
+    }
+
+    public String getIsHandle() {
+        return IsHandle;
+    }
+
+    public void setIsHandle(String isHandle) {
+        IsHandle = isHandle;
+    }
+
+    public String getBarber_Set() {
+        return Barber_Set;
+    }
+
+    public void setBarber_Set(String barber_Set) {
+        Barber_Set = barber_Set;
+    }
+
+    public String getBarber_Actual() {
+        return Barber_Actual;
+    }
+
+    public void setBarber_Actual(String barber_Actual) {
+        Barber_Actual = barber_Actual;
+    }
+
+    public String getGrade() {
+        return Grade;
+    }
+
+    public void setGrade(String grade) {
+        Grade = grade;
     }
 }

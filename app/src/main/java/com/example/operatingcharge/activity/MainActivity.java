@@ -1,10 +1,12 @@
 package com.example.operatingcharge.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.operatingcharge.MyApplication;
@@ -14,8 +16,12 @@ import com.example.operatingcharge.fragment.HomeFragment;
 import com.example.operatingcharge.fragment.ReservationFragment;
 import com.example.operatingcharge.fragment.MineFragment;
 import com.example.operatingcharge.listener.OnTabSelectedListener;
+import com.example.operatingcharge.util.MyAlertDialog;
 import com.example.operatingcharge.widget.Tab;
 import com.example.operatingcharge.widget.TabContainerView;
+import com.pgyersdk.javabean.AppBean;
+import com.pgyersdk.update.PgyUpdateManager;
+import com.pgyersdk.update.UpdateManagerListener;
 
 /**
  *
@@ -27,7 +33,7 @@ import com.example.operatingcharge.widget.TabContainerView;
 public class MainActivity extends AppCompatActivity {
 
     public static MainActivity instance2 = null;
-    public static boolean isForeground = false;
+    private Activity mActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         init();
         //initNFC();
 
-        /*PgyUpdateManager.register(mActivity, new UpdateManagerListener() {
+        PgyUpdateManager.register(mActivity, new UpdateManagerListener() {
             @Override
             public void onUpdateAvailable(final String result) {
 //              将新版本信息封装到AppBean中
@@ -57,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onNoUpdateAvailable() { }
-        });*/
+        });
     }
 
     private void init(){
-
+        mActivity = this;
 //      控件的初始化，然后加上适配器，控件的点击事件
         TabContainerView tabContainerView = (TabContainerView) findViewById(R.id.tab_container);
         MainViewAdapter mainViewAdapter = new MainViewAdapter(getSupportFragmentManager(),
@@ -142,13 +148,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        isForeground = true;
         super.onResume();
     }
 
     @Override
     protected void onPause() {
-        isForeground = false;
         super.onPause();
     }
 

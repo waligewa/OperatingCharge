@@ -44,13 +44,21 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.TaskViewHolder> {
         // 这个是子项的左上角的数量标记
         final HairBean bean = mTaskItemBeanList.get(position);
         if (null == bean) return;
-        holder.username.setText(TextUtils.isEmpty(bean.getUsername()) ? "无" : bean.getUsername());                   // 姓名
-        holder.gender.setText(TextUtils.isEmpty(bean.getSex()) ? "无" : bean.getSex());                               // 性别
-        holder.worknumber.setText(TextUtils.isEmpty(bean.getWorkNumber()) ? "无" : bean.getWorkNumber());             // 工号
-        holder.apartment.setText(TextUtils.isEmpty(bean.getApartment()) ? "无" : bean.getApartment());                // 部门
-        holder.scheduleItem.setText(TextUtils.isEmpty(bean.getBookProject()) ? "无" : bean.getBookProject());         // 预定项目
-        holder.scheduleTime.setText(TextUtils.isEmpty(bean.getTime()) ? "无" : bean.getTime());                       // 预定时间
-        holder.telephone.setText(TextUtils.isEmpty(bean.getPhone()) ? "无" : bean.getPhone());                        // 电话号码
+        holder.username.setText(TextUtils.isEmpty(bean.getName()) ? "无" : bean.getName());                                                 // 姓名
+        holder.gender.setText(TextUtils.isEmpty(bean.getSex()) ? "无" : bean.getSex());                                                     // 性别
+        holder.worknumber.setText(TextUtils.isEmpty(bean.getWorkNo()) ? "无" : bean.getWorkNo());                                           // 工号
+        holder.apartment.setText(TextUtils.isEmpty(bean.getDepartment()) ? "无" : bean.getDepartment());                                    // 部门
+        holder.bookTime.setText(TextUtils.isEmpty(bean.getOrderDate()) ? "无" : bean.getOrderDate().replace("T", " "));   // 预定时间
+        holder.scheduleItem.setText(TextUtils.isEmpty(bean.getProjectName()) ? "无" : bean.getProjectName());                               // 预定项目
+        holder.scheduleTime.setText(TextUtils.isEmpty(bean.getOrderTime()) ? "无" : bean.getOrderTime());                                   // 预定时间段
+        holder.telephone.setText(TextUtils.isEmpty(bean.getTelePhone()) ? "无" : bean.getTelePhone());                                      // 电话号码
+        if(bean.getBarber_Set() == null){
+            holder.state.setText("等待中");
+            holder.state.setTextColor(0xff333333);
+        } else {
+            holder.state.setText("进行中");
+            holder.state.setTextColor(0xff009966);
+        }
         /**
          * 容器点击事件
          */
@@ -75,9 +83,11 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.TaskViewHolder> {
         private TextView gender;                           // 性别
         private TextView worknumber;                       // 工号
         private TextView apartment;                        // 部门
+        private TextView bookTime;                         // 预定时间
         private TextView scheduleItem;                     // 预定项目
-        private TextView scheduleTime;                      // 预定时间
+        private TextView scheduleTime;                     // 预定时间段
         private TextView telephone;                        // 联系电话
+        private TextView state;                            // 状态
 
         public TaskViewHolder(View v) {
             super(v);
@@ -86,9 +96,11 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.TaskViewHolder> {
             gender = (TextView) v.findViewById(R.id.gender);
             worknumber = (TextView) v.findViewById(R.id.worknumber);
             apartment = (TextView) v.findViewById(R.id.apartment);
+            bookTime = (TextView) v.findViewById(R.id.book_time);
             scheduleItem = (TextView) v.findViewById(R.id.schedule_item);
             scheduleTime = (TextView) v.findViewById(R.id.schedule_time);
             telephone = (TextView) v.findViewById(R.id.telephone);
+            state = (TextView) v.findViewById(R.id.state);
         }
     }
 
